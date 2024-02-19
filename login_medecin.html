@@ -1,0 +1,66 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--    <title>Connexion Médecin</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Connexion Médecin</h1>-->
+<!--<form action="traitement_login_medecin.php" method="post">-->
+<!--    <label for="email">Email :</label>-->
+<!--    <input type="email" id="email" name="email" required>-->
+
+<!--    <label for="mot_de_passe">Mot de passe :</label>-->
+<!--    <input type="password" id="mot_de_passe" name="mot_de_passe" required>-->
+
+<!--    <input type="submit" value="Se connecter">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Connexion Médecin</title>
+</head>
+<body>
+<h1>Connexion Médecin</h1>
+<form action="traitement_login_medecin.php" method="post" onsubmit="return validateLoginForm()">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mot_de_passe">Mot de passe :</label>
+    <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+
+    <input type="submit" value="Se connecter">
+</form>
+
+<script>
+    function validateLoginForm() {
+        // Validation côté client en JavaScript (vous pouvez ajouter d'autres validations si nécessaire)
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('mot_de_passe');
+
+        if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
+            alert('Veuillez remplir tous les champs.');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+<script>
+    // Redirection vers rendezvous_medecin.php
+    window.location.href = "rendezvous_medecin.php";
+</script>
+
+</body>
+</html>
